@@ -18,9 +18,9 @@ import math
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pergro_revenue", type=float, required=True, help="Min % revenue growth (YoY)")
-    parser.add_argument("--pergro_op_margin", type=float, required=True, help="Min % op_margin growth (YoY)")
-    parser.add_argument("--num_result", type=int, required=True, help="Number of top results")
+    parser.add_argument("--pergro_revenue", type=float, default=20., help="Min % YoY revenue growth (YoY)")
+    parser.add_argument("--pergro_op_margin", type=float, default=20., help="Min % YoY op_margin growth (YoY)")
+    parser.add_argument("--num_result", type=int, default=100, help="Number of top results")
     parser.add_argument("--revenue_limit", type=float, default=1000e8, help="Minimum revenue in most recent quarter (default: 100억)")
     parser.add_argument("--op_margin_limit", type=float, default=100e8, help="Minimum op_margin in most recent quarter (default: 10억)")
     return parser.parse_args()
